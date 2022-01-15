@@ -49,7 +49,6 @@ public class CustomCharacterController : MonoBehaviour
 			{
                 velocity = 0;
 				LevelManager.instance.Fail();
-				AnimationManager.instance.TriggerLimbo(false);
             }
 			if (value) 
             {
@@ -57,9 +56,6 @@ public class CustomCharacterController : MonoBehaviour
                 isListening = true;
 				curLine = 0;
             }
-
-
-            AnimationManager.instance.anim.SetBool("isWalking", value);
 
             _isWalking = value;
 		}
@@ -109,7 +105,6 @@ public class CustomCharacterController : MonoBehaviour
     IEnumerator JumpAnim()
 	{
         Debug.Log("started");
-        AnimationManager.instance.JumpAnim();
         float alpha = 0;
         while(isJumping)
 		{
@@ -155,16 +150,6 @@ public class CustomCharacterController : MonoBehaviour
     {
         targetXPos = curLine * platformRange;
 
-
-        if (targetYPos > -1)
-        {
-            AnimationManager.instance.TriggerLimbo(false);
-        }
-
-        if (targetYPos == -1)
-		{
-            AnimationManager.instance.TriggerLimbo(true);
-		}
         if (SwipeManager.swipeUp)
         {
             Jump();
@@ -195,7 +180,6 @@ public class CustomCharacterController : MonoBehaviour
 
         transform.localScale = new Vector3(1, 1, 1);
         ParticleController.instance.PlayParticle(ParticleController.instance.winParticles, false);
-        AnimationManager.instance.anim.Play("Idle");
     }
 
     IEnumerator Damage(float val)

@@ -47,7 +47,6 @@ public class LevelManager : MonoBehaviour
         if (previousLevel != null) { Destroy(previousLevel); }
 
         previousLevel = Instantiate(Resources.Load<GameObject>("levels/level-" + curLevel));
-        ColorManager.instance.ChangeColor(curLevel - 1);
         isStarting = false;
     }
     

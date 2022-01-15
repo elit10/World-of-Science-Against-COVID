@@ -31,7 +31,6 @@ public class EndPanel : UIPanel
 			if (successImg.activeSelf) { LevelManager.instance.NextLevel(); }
 			else { LevelManager.instance.RepeatLevel(); }
 			LevelManager.instance.isStarting = true;
-			AnimationManager.instance.SetCamera(0);
 			UIManager.instance.startPanel.Activate(true);
 
 
