@@ -48,7 +48,6 @@ public class CustomCharacterController : MonoBehaviour
             if(!value)
 			{
                 velocity = 0;
-				LevelManager.instance.Fail();
             }
 			if (value) 
             {
@@ -86,15 +85,7 @@ public class CustomCharacterController : MonoBehaviour
         
     }
 
-	void Update()
-	{
-        if(isWalking && isListening)
-		{
-            ListenInputs();
-            SetPosition();
-        }
 
-    }
 
 
     public void Jump()
@@ -126,51 +117,7 @@ public class CustomCharacterController : MonoBehaviour
         yield return null;
 	}
 
-    private void ListenInputs()
-    {
-        //targetXPos = currentPos.x + InputManager.instance.input.x * precision;
 
-        targetYPos = InputManager.instance.input.y;
-
-
-        if(SwipeManager.swipeRight)
-		{
-            curLine++; 
-		}
-        if(SwipeManager.swipeLeft)
-		{
-            curLine--;
-		}
-
-    }
-
-
-
-    private void SetPosition()
-    {
-        targetXPos = curLine * platformRange;
-
-        if (SwipeManager.swipeUp)
-        {
-            Jump();
-            targetYPos = 0;
-        }
-
-
-        curLine = Mathf.Clamp(curLine, -(lineCount - 1) / 2, (lineCount - 1) / 2);
-        currentPos.x = Mathf.Lerp(currentPos.x, targetXPos, Time.deltaTime * 5f);
-        currentPos += Vector3.forward * Time.deltaTime * velocity;
-        transform.position = Vector3.Lerp(transform.position,currentPos,Time.deltaTime * 10);
-        
-    }
-
-    IEnumerator Rotate(float value)
-    {
-		gameObject.transform.eulerAngles = new Vector3(0, value, 0);
-		yield return new WaitForSeconds(.3f);
-		gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
-		yield return null;
-    }
 
 
     public void ResetLevel()
