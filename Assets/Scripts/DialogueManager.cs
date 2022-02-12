@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestNpc : NPC
+public class DialogueManager : MonoBehaviour
 {
-	private void Start()
-	{
-		Walk();
-	}
+
 }

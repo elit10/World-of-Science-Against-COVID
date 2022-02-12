@@ -73,8 +73,19 @@ namespace StarterAssets
 
 		private const float _threshold = 0.01f;
 
+
+		public static FirstPersonController instance;
+
 		private void Awake()
 		{
+			if(instance == null)
+			{
+				instance = this;
+			}
+
+
+
+
 			// get a reference to our main camera
 			if (_mainCamera == null)
 			{

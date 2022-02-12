@@ -7,6 +7,9 @@ public class Raycaster : MonoBehaviour
 
 	RaycastHit hit;
 
+
+
+
 	private void Update()
 	{
 
@@ -15,9 +18,24 @@ public class Raycaster : MonoBehaviour
 		{
 			if(hit.collider.CompareTag("NPC"))
 			{
-				UIManager.instance.NPCInfo.gameObject.SetActive(true);
+
+
+
+
+
+				if(!UIManager.instance.NPCInfo.isActive)
+				{
+					UIManager.instance.NPCInfo.Activate(true);
+				}
 			}
-			else { UIManager.instance.NPCInfo.gameObject.SetActive(false); }
+
+			else
+			{
+				if(UIManager.instance.NPCInfo.isActive)
+				{
+					UIManager.instance.NPCInfo.Activate(false);
+				}
+			}
 		}
 	}
 }

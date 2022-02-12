@@ -2359,9 +2359,9 @@ GameObject:
   - component: {fileID: 9094628152813029353}
   - component: {fileID: 9094628152813029352}
   - component: {fileID: 9094628152813029359}
-  - component: {fileID: 9094628152813029358}
+  - component: {fileID: 2269656584063782018}
   m_Layer: 0
-  m_Name: NPCPlaceHolder
+  m_Name: PedestrianPH
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2451,7 +2451,7 @@ NavMeshAgent:
   m_BaseOffset: -0.1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &9094628152813029358
+--- !u!114 &2269656584063782018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2460,7 +2460,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9094628152813029357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ede8166480863a64aa06b429a4e8a93d, type: 3}
+  m_Script: {fileID: 11500000, guid: 99358553e70488e40a396c1f1e6ebe0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 0}

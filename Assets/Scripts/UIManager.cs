@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour
     #endregion
 
 
-    public Image NPCInfo;
+    public InfoPanel NPCInfo;
 
 
 

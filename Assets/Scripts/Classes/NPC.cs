@@ -23,9 +23,6 @@ public class NPC : MonoBehaviour
 
 	public void Loop()
 	{
-		Debug.Log(agent.speed);
-
-
 		anim.SetFloat("Speed", agent.speed);
 	}
 
