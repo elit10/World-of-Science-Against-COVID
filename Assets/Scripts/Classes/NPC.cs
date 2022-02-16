@@ -9,6 +9,12 @@ public class NPC : MonoBehaviour
 	public NavMeshAgent agent;
 	public Animator anim;
 
+	public string NPCname;
+	public string NPCjob;
+	public string NPCage;
+	public string NPCvaccineCount;
+
+
 	private void Awake()
 	{
 		agent = GetComponent<NavMeshAgent>();

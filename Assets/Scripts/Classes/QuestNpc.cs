@@ -7,6 +7,7 @@ public class QuestNpc : NPC
 
 	private GameObject player;
 
+	public Dialogue firstDialogue;
 
 
 	private void Start()
