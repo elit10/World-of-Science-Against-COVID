@@ -18,10 +18,8 @@ public class DialogueManager : MonoBehaviour
 	#endregion
 
 	[HideInInspector]
-	public List<Dialogue> dialogues;
-	[HideInInspector]
 	public Dialogue nullDialogue;
-	[HideInInspector]
+
 	public TextAsset[] texts;
 
 	public GameObject dialoguesGO;
@@ -31,8 +29,6 @@ public class DialogueManager : MonoBehaviour
 		CreateNullDialogue();
 
 		texts = Resources.LoadAll<TextAsset>("Text/Dialogues/");
-
-
 		FormDialogue();
 
 
@@ -61,7 +57,7 @@ public class DialogueManager : MonoBehaviour
 
 	public void FormDialogue()
 	{
-		CreateDialogue(TargetText("example1"));
+		
 	
 	}
 
@@ -82,13 +78,27 @@ public class DialogueManager : MonoBehaviour
 		return toReturn;	
 	}
 
+	public Dialogue[] PullDialogues(string name)
+    {
+		List<Dialogue> dialogues = new List<Dialogue>();
 
+		int order = 1;
+		Dialogue curDialogue = CreateDialogue(TargetText(name + order));
+		dialogues.Add(curDialogue);
+		while(curDialogue.dialogues[curDialogue.dialogues.Length-1] != "end")
+        {
+			order++;
+			curDialogue = CreateDialogue(TargetText(name + order));
+			dialogues.Add(curDialogue);
+		}
 
+		curDialogue.nextDialogue = nullDialogue;
+
+		return dialogues.ToArray();
+    }
 
 	public Dialogue CreateDialogue(TextAsset val)
 	{
-
-		Debug.Log(val.text);
 
 
 		Dialogue newDialogue = dialoguesGO.AddComponent<Dialogue>();
@@ -103,20 +113,18 @@ public class DialogueManager : MonoBehaviour
 		}
 
 
-		if(texts[texts.Length-1] == "end")
-		{
-			Debug.Log("dialogue ended");
-			newDialogue.nextDialogue = nullDialogue;
-		}
-		else
-		{
-			Debug.Log("The next dialogue is " + texts[texts.Length - 1]);
-			newDialogue.nextDialogue = CreateDialogue(TargetText(texts[texts.Length - 1]));
-		}
+		//if(texts[texts.Length-1] == "end")
+		//{
+		//	Debug.Log("dialogue ended");
+		//	newDialogue.nextDialogue = nullDialogue;
+		//}
+		//else
+		//{
+		//	Debug.Log("The next dialogue is " + texts[texts.Length - 1]);
+		//	newDialogue.nextDialogue = CreateDialogue(TargetText(texts[texts.Length - 1]));
+		//}
 
 		newDialogue.dialogues = texts;
-
-		dialogues.Add(newDialogue);
 
 		return newDialogue;
 		
