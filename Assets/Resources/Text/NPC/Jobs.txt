@@ -1,0 +1,6 @@
+Engineer|
+Teacher|
+Student|Nurse|Doctor|Firefighter|
+Artist|Baker|Unemployed|Police|Pilot|Driver|Lawyer|
+Farmer|Vet|Journalist|Architect|Builder|Freelancer|Developer|
+Dentist|Rubic cube expert 

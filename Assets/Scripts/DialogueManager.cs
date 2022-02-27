@@ -24,6 +24,9 @@ public class DialogueManager : MonoBehaviour
 
 	public GameObject dialoguesGO;
 
+	private QuestNpc curNPC;
+
+
 	private void Start()
 	{
 		CreateNullDialogue();
@@ -113,16 +116,6 @@ public class DialogueManager : MonoBehaviour
 		}
 
 
-		//if(texts[texts.Length-1] == "end")
-		//{
-		//	Debug.Log("dialogue ended");
-		//	newDialogue.nextDialogue = nullDialogue;
-		//}
-		//else
-		//{
-		//	Debug.Log("The next dialogue is " + texts[texts.Length - 1]);
-		//	newDialogue.nextDialogue = CreateDialogue(TargetText(texts[texts.Length - 1]));
-		//}
 
 		newDialogue.dialogues = texts;
 
@@ -130,6 +123,56 @@ public class DialogueManager : MonoBehaviour
 		
 	}
 
+
+
+	public void EnterDialogue(Dialogue val,string name,QuestNpc self)
+    {
+		curNPC = self;
+		curNPC.transform.LookAt(GameObject.FindWithTag("Player").transform.position);
+		curNPC.Walk(false);
+
+		CameraManager.instance.Focus(true);
+		CameraManager.instance.LockOnTarget(curNPC.gameObject.transform.position);
+
+		SlowDownTime(true);
+		Debug.Log("entered dialogue");
+		
+		UIManager.instance.OpenUpPanel(UIManager.instance.dialoguePanel);
+
+		UIManager.instance.dialoguePanel.Dialogueloop(val, name);
+
+
+
+
+		//open up dialogue screen
+
+
+	}
+
+
+
+
+
+	public void EndDialogue()
+    {
+		CameraManager.instance.Focus(false);
+		CameraManager.instance.LockOnTarget(false);
+		curNPC.Walk(true);
+
+		curNPC.dialogueOrder++;
+		SlowDownTime(false);
+		UIManager.instance.CloseAllPanels();
+		
+
+
+    }
+
+
+
+	public void SlowDownTime(bool val)
+	{
+		Time.timeScale = val ? 0.2f : 1;
+	}
 
 
 

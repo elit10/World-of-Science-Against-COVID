@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using StarterAssets;
+
 public class QuestNpc : NPC
 {
 
 	private GameObject player;
 
-
+	public int dialogueOrder = 0;
 
 	public string ID;
 
@@ -16,7 +16,7 @@ public class QuestNpc : NPC
 
 	private void Start()
 	{
-		player = FirstPersonController.instance.gameObject;
+		player = GameObject.FindWithTag("Player");
 
 		InvokeRepeating("QuestLoop", 0, 0.2f);
 
@@ -41,11 +41,15 @@ public class QuestNpc : NPC
 
 	void QuestLoop()
 	{
-		if(isCloseEnough())
+		if(isCloseEnough() && !UIManager.instance.dialoguePanel.isInDialogue)
 		{
-			Debug.Log("Quest");
+			if(dialogueOrder < dialogues.Length)
+            {
+				DialogueManager.instance.EnterDialogue(dialogues[dialogueOrder], data.NPCname, this);
+			}
 		}
 	}
+
 
 
 	public bool isCloseEnough()

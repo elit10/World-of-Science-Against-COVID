@@ -20,7 +20,32 @@ public class UIManager : MonoBehaviour
 
 
     public InfoPanel NPCInfo;
+    public DialoguePanel dialoguePanel;
 
+    public Panel[] panels;
+
+    public void OpenUpPanel(Panel panel)
+    {
+        foreach(Panel p in panels)
+        {
+            if(panel == p)
+            {
+                p.Activate(true);
+            }
+            else
+            {
+                p.Activate(false);
+            }
+        }
+    }
+
+    public void CloseAllPanels()
+    {
+        foreach(Panel p in panels)
+        {
+            p.Activate(false);
+        }
+    }
 
 
 
