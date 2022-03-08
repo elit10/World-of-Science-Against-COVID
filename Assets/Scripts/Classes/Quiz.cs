@@ -4,14 +4,26 @@ using UnityEngine;
 
 public class Quiz : MonoBehaviour
 {
-    public string question;
+    public Question[] questions;
 
-    public answer[] answers;
+    public int order;
 
     public void GenerateAnswers()
     {
         
     }
+
+
+
+
+
+}
+
+public class Question
+{
+    public string question;
+
+    public Answer[] answers;
 
     public int CorrectOrder()
     {
@@ -19,7 +31,7 @@ public class Quiz : MonoBehaviour
 
         for (int i = 0; i < answers.Length; i++)
         {
-            if(answers[i].isCorrect)
+            if (answers[i].isCorrect)
             {
                 order = i;
             }
@@ -35,9 +47,7 @@ public class Quiz : MonoBehaviour
 
 
 
-
-
-public class answer
+public class Answer
 {
     public string text;
     public bool isCorrect;

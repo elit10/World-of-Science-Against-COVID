@@ -11,6 +11,7 @@ public class QuestNpc : NPC
 
 	public string ID;
 
+	public Quiz curQuiz;
 
 	public Dialogue[] dialogues;
 
@@ -21,6 +22,9 @@ public class QuestNpc : NPC
 		InvokeRepeating("QuestLoop", 0, 0.2f);
 
 		Invoke("PullDialogue", 0.5f);
+
+
+		
 	}
 
 
@@ -29,10 +33,10 @@ public class QuestNpc : NPC
     {
 		dialogues = DialogueManager.instance.PullDialogues(ID);
 
+		curQuiz = QuizManager.instance.NewQuiz(5);
 
 
-
-		foreach(Dialogue dg in dialogues)
+		foreach (Dialogue dg in dialogues)
         {
 			Debug.Log(dg.dialogues[0]);
         }
@@ -41,11 +45,15 @@ public class QuestNpc : NPC
 
 	void QuestLoop()
 	{
-		if(isCloseEnough() && !UIManager.instance.dialoguePanel.isInDialogue)
+		if (isCloseEnough() && !UIManager.instance.dialoguePanel.isInDialogue)
 		{
-			if(dialogueOrder < dialogues.Length)
-            {
+			if (dialogueOrder < dialogues.Length)
+			{
 				DialogueManager.instance.EnterDialogue(dialogues[dialogueOrder], data.NPCname, this);
+			}
+			else
+			{
+				Debug.Log("Quiz");
 			}
 		}
 	}

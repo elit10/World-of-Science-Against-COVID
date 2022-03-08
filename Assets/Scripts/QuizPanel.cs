@@ -7,7 +7,6 @@ public class QuizPanel : Panel
 {
     public Quiz source;
 
-
     [Header("Texts")]
     public Text questionText;
     public Text A;
@@ -20,7 +19,7 @@ public class QuizPanel : Panel
 
     public void Answer(int order)
     {
-        if (order == source.CorrectOrder())
+        if (order == source.questions[source.order].CorrectOrder())
         {
             Debug.Log("Chose the right answer");
         }
