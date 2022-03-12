@@ -53,7 +53,11 @@ public class QuestNpc : NPC
 			}
 			else
 			{
+				//QUÝZLERÝ BURASI AÇIYOR
+
+
 				Debug.Log("Quiz");
+				QuizManager.instance.OpenUpDialogue(curQuiz);
 			}
 		}
 	}

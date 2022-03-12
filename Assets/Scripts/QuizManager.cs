@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class QuizManager : MonoBehaviour
 {
@@ -19,8 +20,8 @@ public class QuizManager : MonoBehaviour
 
 	public int level;
 
-	private List<TextAsset> texts;
-
+	public List<TextAsset> texts;
+	public TextAsset[] array;
 
 
 	private void Start()
@@ -30,14 +31,13 @@ public class QuizManager : MonoBehaviour
 
 	public void PullQuestions(int order)
 	{
-		TextAsset[] array = Resources.LoadAll<TextAsset>("Text/Quizzes/Quiz" + level);
+		array = Resources.LoadAll<TextAsset>("Text/Quizzes/Quiz" + level);
 
 		texts = new List<TextAsset>(array);
 
 
 
 	}
-
 
 	public string[] Textify(TextAsset val)
 	{
@@ -54,7 +54,7 @@ public class QuizManager : MonoBehaviour
 
 		for (int i = 0; i < count; i++)
 		{
-			int number = Random.Range(0, texts.Count);
+			int number = Random.Range(0, texts.Count-1);
 
 			questions[i] = NewQuestion(Textify(texts[number]));
 
@@ -66,7 +66,6 @@ public class QuizManager : MonoBehaviour
 
 		return quiz;
 	}
-
 
 	public Question NewQuestion(string[] val)
 	{
@@ -106,4 +105,28 @@ public class QuizManager : MonoBehaviour
 
 		return answer;
 	}
+
+	private void Update()
+	{
+
+		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.None;
+	}
+
+	public void OpenUpDialogue(Quiz source)
+	{
+		UIManager.instance.OpenUpPanel(UIManager.instance.quizPanel);
+		UIManager.instance.quizPanel.source = source;
+		UIManager.instance.quizPanel.curQuestion = source.questions[0];
+
+	}
+
+	public void CloseDialogue()
+	{
+
+	}
+
+
+
+
 }

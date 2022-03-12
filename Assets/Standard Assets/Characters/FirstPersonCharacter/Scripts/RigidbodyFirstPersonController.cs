@@ -8,7 +8,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (CapsuleCollider))]
     public class RigidbodyFirstPersonController : MonoBehaviour
     {
-        [Serializable]
+		#region Singleton
+		public static RigidbodyFirstPersonController instance;
+		private void Awake()
+		{
+			if(instance == null)
+			{
+                instance = this;
+			}
+		}
+		#endregion
+
+
+		[Serializable]
         public class MovementSettings
         {
             public float ForwardSpeed = 8.0f;   // Speed when walking forward

@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
 
     public InfoPanel NPCInfo;
     public DialoguePanel dialoguePanel;
-
+    public QuizPanel quizPanel;
     public Panel[] panels;
 
     public void OpenUpPanel(Panel panel)
