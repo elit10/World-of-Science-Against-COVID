@@ -113,7 +113,7 @@ public class QuizManager : MonoBehaviour
 		Cursor.lockState = CursorLockMode.None;
 	}
 
-	public void OpenUpDialogue(Quiz source)
+	public void OpenUpQuiz(Quiz source)
 	{
 		UIManager.instance.OpenUpPanel(UIManager.instance.quizPanel);
 		UIManager.instance.quizPanel.source = source;
@@ -121,9 +121,9 @@ public class QuizManager : MonoBehaviour
 
 	}
 
-	public void CloseDialogue()
+	public void CloseQuiz()
 	{
-
+		UIManager.instance.CloseAllPanels();
 	}
 
 

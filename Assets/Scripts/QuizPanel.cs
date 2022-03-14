@@ -78,6 +78,7 @@ public class QuizPanel : Panel
             {
                 //End of quiz
                 Debug.Log("End of quiz");
+                QuizManager.instance.CloseQuiz();
             }
         }
 	}

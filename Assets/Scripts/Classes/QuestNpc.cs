@@ -57,7 +57,7 @@ public class QuestNpc : NPC
 
 
 				Debug.Log("Quiz");
-				QuizManager.instance.OpenUpDialogue(curQuiz);
+				QuizManager.instance.OpenUpQuiz(curQuiz);
 			}
 		}
 	}
