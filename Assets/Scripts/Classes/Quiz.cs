@@ -21,6 +21,16 @@ public class Quiz : MonoBehaviour
 
 public class Question
 {
+    public enum QuestionType
+	{
+        MCQ,
+        matchingQuestion
+	};
+
+    public QuestionType curType;
+
+
+
     public string question;
 
     public Answer[] answers;

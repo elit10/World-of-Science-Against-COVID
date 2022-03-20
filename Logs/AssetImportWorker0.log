@@ -15,7 +15,7 @@ C:/Users/onurs/OneDrive/Belgeler/GitHub/World-of-Science-Against-COVID
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52502
+63329
 Successfully changed project path to: C:/Users/onurs/OneDrive/Belgeler/GitHub/World-of-Science-Against-COVID
 C:/Users/onurs/OneDrive/Belgeler/GitHub/World-of-Science-Against-COVID
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/onurs/OneDrive/Belgeler/GitHub/World-of-Science-Against-COVID
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 86.53 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 87.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.12f1 (48b1aa000234)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.12f1/Editor/Data/Resources/UnitySubsystems
@@ -63,76 +63,76 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.12f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56204
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56508
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007895 seconds.
+Registered in 0.007597 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 86.09 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 86.85 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.619 seconds
+- Completed reload, in  0.630 seconds
 Domain Reload Profiling:
-	ReloadAssembly (619ms)
-		BeginReloadAssembly (70ms)
+	ReloadAssembly (631ms)
+		BeginReloadAssembly (74ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (435ms)
-			LoadAssemblies (68ms)
+		EndReloadAssembly (444ms)
+			LoadAssemblies (72ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (97ms)
+			SetupTypeCache (105ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (264ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (263ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (86ms)
+				RefreshPlugins (87ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (125ms)
-				ProcessInitializeOnLoadMethodAttributes (44ms)
+				ProcessInitializeOnLoadAttributes (123ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005696 seconds.
+Registered in 0.005678 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\onurs\OneDrive\Belgeler\GitHub\World-of-Science-Against-COVID\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\onurs\OneDrive\Belgeler\GitHub\World-of-Science-Against-COVID\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.989 seconds
+- Completed reload, in  0.984 seconds
 Domain Reload Profiling:
-	ReloadAssembly (990ms)
+	ReloadAssembly (984ms)
 		BeginReloadAssembly (108ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (767ms)
-			LoadAssemblies (69ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (754ms)
+			LoadAssemblies (75ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (221ms)
+			SetupTypeCache (229ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (68ms)
-			SetupLoadedEditorAssemblies (360ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (356ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (77ms)
-				ProcessInitializeOnLoadAttributes (244ms)
-				ProcessInitializeOnLoadMethodAttributes (23ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (241ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
@@ -140,12 +140,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3434 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 38 unused Assets / (508.8 KB). Loaded Objects now: 3925.
+Unloading 38 unused Assets / (508.9 KB). Loaded Objects now: 3925.
 Memory consumption went from 143.8 MB to 143.3 MB.
-Total: 3.441800 ms (FindLiveObjects: 0.299900 ms CreateObjectMapping: 0.103900 ms MarkObjects: 2.724000 ms  DeleteObjects: 0.312900 ms)
+Total: 3.703300 ms (FindLiveObjects: 0.301800 ms CreateObjectMapping: 0.100900 ms MarkObjects: 2.939800 ms  DeleteObjects: 0.359500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,7 +159,173 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 255559.426487 seconds.
-  path: Assets/Resources/Text/Quizzes/Quiz1/Question1.txt
-  artifactKey: Guid(304cab5b1adaa34429e8cd33e627791a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Text/Quizzes/Quiz1/Question1.txt using Guid(304cab5b1adaa34429e8cd33e627791a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '888b0caac2cc1c0ebf5399070d61f0e2') in 0.037944 seconds 
+  Time since last request: 755684.717125 seconds.
+  path: Assets/Models/Characters/regina.fbx
+  artifactKey: Guid(736d631d8ca51014f83d68aa2c87d24e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbx using Guid(736d631d8ca51014f83d68aa2c87d24e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9e7c6edd60e54824a73ee6cdae975f8') in 0.295920 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.452171 seconds.
+  path: Assets/Models/Characters/regina.fbx
+  artifactKey: Guid(736d631d8ca51014f83d68aa2c87d24e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbx using Guid(736d631d8ca51014f83d68aa2c87d24e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c58985ab3475cabb520a1113522d2d80') in 0.141275 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.754048 seconds.
+  path: Assets/Models/Characters/regina.fbm
+  artifactKey: Guid(b3e2a39abe30a7b45bd5775bf7efb9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm using Guid(b3e2a39abe30a7b45bd5775bf7efb9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16bf7f619fd0e798a119f9a6826442ff') in 0.005384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.041755 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Body_Diffuse.png
+  artifactKey: Guid(37ad2dc3da478e548a82a5725b9d252d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Body_Diffuse.png using Guid(37ad2dc3da478e548a82a5725b9d252d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.027207 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_body_diffuse.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.567465Z' while content on disk has modification time of '2022-03-20T17:17:52.3055263Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_body_diffuse.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.567465Z' while content on disk has modification time of '2022-03-20T17:17:52.3055263Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Hair_Opacity.png
+  artifactKey: Guid(f4c4ea7dfcc545444b6a86ab4a6314ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Hair_Opacity.png using Guid(f4c4ea7dfcc545444b6a86ab4a6314ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.008241 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_hair_opacity.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.6185117Z' while content on disk has modification time of '2022-03-20T17:17:52.3285466Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_hair_opacity.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.6185117Z' while content on disk has modification time of '2022-03-20T17:17:52.3285466Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Hat_Gloss.png
+  artifactKey: Guid(eacca2760b91bf04d9db9ca8ab385a15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Hat_Gloss.png using Guid(eacca2760b91bf04d9db9ca8ab385a15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.007685 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_hat_gloss.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.614508Z' while content on disk has modification time of '2022-03-20T17:17:52.3265458Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_hat_gloss.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.614508Z' while content on disk has modification time of '2022-03-20T17:17:52.3265458Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Shoes_Opacity.png
+  artifactKey: Guid(59d0702ee9a40dd4eaeab2f50873c0e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Shoes_Opacity.png using Guid(59d0702ee9a40dd4eaeab2f50873c0e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.006501 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_shoes_opacity.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.5974935Z' while content on disk has modification time of '2022-03-20T17:17:52.3165373Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_shoes_opacity.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.5974935Z' while content on disk has modification time of '2022-03-20T17:17:52.3165373Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Top_Gloss.png
+  artifactKey: Guid(47d99894d99889644b1af504ca672d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Top_Gloss.png using Guid(47d99894d99889644b1af504ca672d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.007152 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_top_gloss.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.5554544Z' while content on disk has modification time of '2022-03-20T17:17:52.3025244Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_top_gloss.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.5554544Z' while content on disk has modification time of '2022-03-20T17:17:52.3025244Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Bottom_Gloss.png
+  artifactKey: Guid(6e5e6273721966f4a92ae39de2537619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Bottom_Gloss.png using Guid(6e5e6273721966f4a92ae39de2537619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.006445 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_bottom_gloss.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.6044985Z' while content on disk has modification time of '2022-03-20T17:17:52.3215426Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_bottom_gloss.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.6044985Z' while content on disk has modification time of '2022-03-20T17:17:52.3215426Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Top_Specular.png
+  artifactKey: Guid(52ce5c71aec8e75418d04db08d3cb93f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Top_Specular.png using Guid(52ce5c71aec8e75418d04db08d3cb93f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.008838 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_top_specular.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.5544547Z' while content on disk has modification time of '2022-03-20T17:17:52.3015312Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_top_specular.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.5544547Z' while content on disk has modification time of '2022-03-20T17:17:52.3015312Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Bottom_Diffuse.png
+  artifactKey: Guid(613f085b5399f7f48ae54dae127030f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Bottom_Diffuse.png using Guid(613f085b5399f7f48ae54dae127030f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.007846 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_bottom_diffuse.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.601498Z' while content on disk has modification time of '2022-03-20T17:17:52.3185393Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_bottom_diffuse.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.601498Z' while content on disk has modification time of '2022-03-20T17:17:52.3185393Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Body_Specular.png
+  artifactKey: Guid(92e3f6f0c97c0d24bb90f063bb3418f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Body_Specular.png using Guid(92e3f6f0c97c0d24bb90f063bb3418f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.011732 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_body_specular.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.585481Z' while content on disk has modification time of '2022-03-20T17:17:52.3115321Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_body_specular.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.585481Z' while content on disk has modification time of '2022-03-20T17:17:52.3115321Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Hair_Normal.png
+  artifactKey: Guid(1afd7831dc0a03d40b10b9fdfaa25b2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Hair_Normal.png using Guid(1afd7831dc0a03d40b10b9fdfaa25b2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '880ebfd51a9524df81cae40cc585ffb8') in 0.016506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Shoes_Gloss.png
+  artifactKey: Guid(8725852911fa5db47a5c84ca7f9f4503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Shoes_Gloss.png using Guid(8725852911fa5db47a5c84ca7f9f4503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.007645 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_shoes_gloss.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.5984934Z' while content on disk has modification time of '2022-03-20T17:17:52.317538Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_shoes_gloss.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.5984934Z' while content on disk has modification time of '2022-03-20T17:17:52.317538Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Hat_Diffuse.png
+  artifactKey: Guid(e9dcac2ee82849b4a981fc26dc876d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Hat_Diffuse.png using Guid(e9dcac2ee82849b4a981fc26dc876d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.009475 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_hat_diffuse.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.6105043Z' while content on disk has modification time of '2022-03-20T17:17:52.3235434Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_hat_diffuse.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.6105043Z' while content on disk has modification time of '2022-03-20T17:17:52.3235434Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Hair_Specular.png
+  artifactKey: Guid(dccbbb9f8581e8340a07f8daa6d9ce4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Hair_Specular.png using Guid(dccbbb9f8581e8340a07f8daa6d9ce4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.006129 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_hair_specular.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.6185117Z' while content on disk has modification time of '2022-03-20T17:17:52.3285466Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_hair_specular.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.6185117Z' while content on disk has modification time of '2022-03-20T17:17:52.3285466Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Top_Normal.png
+  artifactKey: Guid(5acda2c0fe6059b40bf15160690d39d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Top_Normal.png using Guid(5acda2c0fe6059b40bf15160690d39d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08da487c5d2cf81ec8b92e618e92b1e5') in 0.015066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Bottom_Specular.png
+  artifactKey: Guid(6ea3e661ff26c264687e34c198acffed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Bottom_Specular.png using Guid(6ea3e661ff26c264687e34c198acffed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.011970 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_bottom_specular.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.6044985Z' while content on disk has modification time of '2022-03-20T17:17:52.3205411Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_bottom_specular.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.6044985Z' while content on disk has modification time of '2022-03-20T17:17:52.3205411Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Shoes_Diffuse.png
+  artifactKey: Guid(599e978705a43fc46b159e6ca9a13e97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Shoes_Diffuse.png using Guid(599e978705a43fc46b159e6ca9a13e97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.009943 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_shoes_diffuse.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.5954905Z' while content on disk has modification time of '2022-03-20T17:17:52.3155354Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_shoes_diffuse.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.5954905Z' while content on disk has modification time of '2022-03-20T17:17:52.3155354Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Shoes_Normal.png
+  artifactKey: Guid(462c48c6854a4f0459d1e7c697428d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Shoes_Normal.png using Guid(462c48c6854a4f0459d1e7c697428d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '697eab3e6305b402545e6c4d86632ea4') in 0.013108 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Top_Opacity.png
+  artifactKey: Guid(9f9aa65d0e9b42c42a57f3720d7d0872) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Top_Opacity.png using Guid(9f9aa65d0e9b42c42a57f3720d7d0872) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.006829 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_top_opacity.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.5544547Z' while content on disk has modification time of '2022-03-20T17:17:52.3015312Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_top_opacity.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.5544547Z' while content on disk has modification time of '2022-03-20T17:17:52.3015312Z'
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Models/Characters/regina.fbm/Regina_Bottom_Opacity.png
+  artifactKey: Guid(dcd5f2138eea9654bbece03a502e4492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/regina.fbm/Regina_Bottom_Opacity.png using Guid(dcd5f2138eea9654bbece03a502e4492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.009580 seconds  code(4) message(Build asset version error: assets/models/characters/regina.fbm/regina_bottom_opacity.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.6034974Z' while content on disk has modification time of '2022-03-20T17:17:52.3205411Z')
+  ERROR: Build asset version error: assets/models/characters/regina.fbm/regina_bottom_opacity.png in SourceAssetDB has modification time of '2022-03-20T17:17:49.6034974Z' while content on disk has modification time of '2022-03-20T17:17:52.3205411Z'
+========================================================================
+Received Import Request.
+  Time since last request: 17.298172 seconds.
+  path: Assets/Models/Characters/Ch23_nonPBR.fbx
+  artifactKey: Guid(01d89811c2c65ff4ebddbae4267ada55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/Ch23_nonPBR.fbx using Guid(01d89811c2c65ff4ebddbae4267ada55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e68b86359b7a910671492718267c209') in 0.115927 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.590740 seconds.
+  path: Assets/Models/Characters/Ch23_nonPBR.fbx
+  artifactKey: Guid(01d89811c2c65ff4ebddbae4267ada55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/Ch23_nonPBR.fbx using Guid(01d89811c2c65ff4ebddbae4267ada55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f81ea9cbc63b3b35b6a919b32c01f994') in 0.109685 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.039755 seconds.
+  path: Assets/Models/Characters/Ch08_nonPBR.fbx
+  artifactKey: Guid(e9fde12307998bc44ba59c9f3e6a3c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/Ch08_nonPBR.fbx using Guid(e9fde12307998bc44ba59c9f3e6a3c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcbbbf8a2cb9c0ced4d9293f64aa62c8') in 0.127792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.317357 seconds.
+  path: Assets/Models/Characters/Ch08_nonPBR.fbx
+  artifactKey: Guid(e9fde12307998bc44ba59c9f3e6a3c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Characters/Ch08_nonPBR.fbx using Guid(e9fde12307998bc44ba59c9f3e6a3c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca15c05ba4ba8b2057f7c690925de9d8') in 0.135128 seconds 
