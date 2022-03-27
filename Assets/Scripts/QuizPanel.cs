@@ -43,9 +43,19 @@ public class QuizPanel : Panel
 
     public int questionNumber;
 
+
+    public int firstDigit = 7;
+    public void AnswerMatch(int order)
+	{
+       
+
+
+
+
+	}
     public void Answer(int order)
     {
-        if (order == source.questions[source.order].CorrectOrder())
+        if (source.questions[source.order].CorrectOrder()[order] == 1)
         {
             questionNumber++;
             if(questionNumber <source.questions.Length)
