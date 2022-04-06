@@ -29,31 +29,31 @@ public class Question
 	};
 
     private questionType _curType;
-    public questionType curType
-	{
-        get
-		{
-            if(answers.Length == 6)
-			{
-                _curType = questionType.Matching;
-			}
-            if(answers.Length <=4 && answers.Length>0)
-			{
-                _curType = questionType.MCQ;
-			}
-            else
-			{
-                _curType = questionType.invalid;
-			}
+    public questionType curType;
+	//{
+ //       get
+	//	{
+ //           if(answers.Length == 7)
+	//		{
+ //               _curType = questionType.Matching;
+	//		}
+ //           if(answers.Length <=5 && answers.Length>1)
+	//		{
+ //               _curType = questionType.MCQ;
+	//		}
+ //           else
+	//		{
+ //               _curType = questionType.invalid;
+	//		}
 
-            return _curType;
-		}
+ //           return _curType;
+	//	}
 
-		set
-		{
-            _curType = value;
-		}
-	}
+	//	set
+	//	{
+ //           _curType = value;
+	//	}
+	//}
 
 
 

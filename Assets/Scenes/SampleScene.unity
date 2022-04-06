@@ -4568,12 +4568,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   source: {fileID: 0}
+  MCQ: {fileID: 700789482}
+  Matching: {fileID: 1762936200}
   questionText: {fileID: 661716563}
   answers:
   - {fileID: 132816226}
   - {fileID: 333064872}
   - {fileID: 705304614}
   - {fileID: 410526086}
+  mAnswers:
+  - {fileID: 255855987}
+  - {fileID: 728382805}
+  - {fileID: 996475785}
+  - {fileID: 1177211033}
+  - {fileID: 1229982359}
+  - {fileID: 209171024}
   questionNumber: 0
   firstDigit: 7
 --- !u!1 &1075464984
@@ -40474,7 +40483,6 @@ MonoBehaviour:
     MaximumX: 90
     smooth: 1
     smoothTime: 18
-    lockCursor: 1
   advancedSettings:
     groundCheckDistance: 0.1
     stickToGroundHelperDistance: 0.6

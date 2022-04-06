@@ -34,8 +34,6 @@ public class DialogueManager : MonoBehaviour
 		texts = Resources.LoadAll<TextAsset>("Text/Dialogues/");
 		FormDialogue();
 
-
-		Debug.Log(nullDialogue.dialogues[0]);
 	}
 
 

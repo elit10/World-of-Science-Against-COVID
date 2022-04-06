@@ -16,6 +16,9 @@ public class Raycaster : MonoBehaviour
 
 		if(Physics.Raycast(gameObject.transform.position,gameObject.transform.forward,out hit,100f))
 		{
+			if (UIManager.instance.NPCInfo == null) { return; }
+
+
 			if(hit.collider.GetComponent<NPC>() != null)
 			{
 				if(!UIManager.instance.NPCInfo.isActive)

@@ -70,6 +70,25 @@ public class QuizManager : MonoBehaviour
 	public Question NewQuestion(string[] val)
 	{
 		Question question = new Question();
+		Debug.Log("val is : " + val.Length);
+
+
+		if(val.Length == 7)
+        {
+			//matching question
+
+			question.curType = Question.questionType.Matching;
+
+        }
+		else if (val.Length <= 5)
+		{
+			//MCQ
+			question.curType = Question.questionType.MCQ;
+		}
+		else
+		{
+			question.curType = Question.questionType.invalid;
+		}
 
 		question.question = val[0];
 

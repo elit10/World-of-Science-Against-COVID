@@ -38,7 +38,7 @@ public class QuestNpc : NPC
 
 		foreach (Dialogue dg in dialogues)
         {
-			Debug.Log(dg.dialogues[0]);
+			//Debug.Log(dg.dialogues[0]);
         }
     }
 
@@ -53,10 +53,8 @@ public class QuestNpc : NPC
 			}
 			else
 			{
-				//QUÝZLERÝ BURASI AÇIYOR
+				//QU?ZLER? BURASI A?IYOR
 
-
-				Debug.Log("Quiz");
 				QuizManager.instance.OpenUpQuiz(curQuiz);
 			}
 		}

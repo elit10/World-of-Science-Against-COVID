@@ -40,7 +40,9 @@ public class CameraManager : MonoBehaviour
 
     private void Start()
     {
-        mainCamera = this.GetComponent<Camera>();
+        mainCamera = GetComponent<Camera>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void LockOnTarget(Vector3 position)

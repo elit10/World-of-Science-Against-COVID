@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class QuizPanel : Panel
 {
     public Quiz source;
-
+    public GameObject MCQ;
+    public GameObject Matching;
     private Question _curQuestion;
     public Question curQuestion
 	{
@@ -15,11 +16,21 @@ public class QuizPanel : Panel
             return _curQuestion;
 		}
 
-		set
-		{
+        set
+        {
+            Matching.SetActive(value.curType == Question.questionType.Matching);
+            MCQ.SetActive(value.curType != Question.questionType.Matching);
+
+            Text[] curAnswer = value.curType == Question.questionType.Matching ? mAnswers : answers;
+            Text curQuestion = value.curType == Question.questionType.Matching ? mQuestionText : questionText;
+
+            Debug.Log(value.curType);
+            Debug.Log(value.answers.Length);
+
+
             _curQuestion = value;
 
-            questionText.text = value.question;
+            curQuestion.text = value.question;
 
             foreach(Text text in answers)
 			{
@@ -28,7 +39,7 @@ public class QuizPanel : Panel
 
 			for (int i = 0; i < value.answers.Length; i++)
 			{
-                answers[i].text = value.answers[i].text;
+                curAnswer[i].text = value.answers[i].text;
 			}
 
 
@@ -36,10 +47,13 @@ public class QuizPanel : Panel
 	}
 
 
-    [Header("Texts")]
+    [Header("MCQ Texts")]
     public Text questionText;
     public Text[] answers;
 
+    [Header("Matching")]
+    public Text[] mAnswers;
+    public Text mQuestionText;
 
     public int questionNumber;
 
