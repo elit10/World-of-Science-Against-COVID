@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PedestrianSpawner : MonoBehaviour
 {
-	public GameObject pedestrianPrefab;
+	public GameObject[] pedestrianPrefabs;
 
 	public int spawnCount;
 
@@ -21,7 +21,8 @@ public class PedestrianSpawner : MonoBehaviour
 
 		while(count<spawnCount)
 		{
-			GameObject obj = Instantiate(pedestrianPrefab);
+			GameObject curPrefab = pedestrianPrefabs[Random.Range(0, pedestrianPrefabs.Length - 1)];
+			GameObject obj = Instantiate(curPrefab);
 			Transform child = transform.GetChild(Random.Range(0, transform.childCount - 1));
 			obj.GetComponent<WaypointNavigator>().curWaypoint = child.GetComponent<Waypoint>();
 			obj.transform.position = child.position;

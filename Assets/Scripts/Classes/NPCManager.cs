@@ -54,7 +54,7 @@ public class NPCManager : MonoBehaviour
 
         newData.NPCjob = jobs[Random.Range(0, jobs.Length - 1)];
 
-        newData.NPCvaccineCount = Random.Range(0, 3).ToString();
+        newData.NPCvaccineCount = Random.Range(0, 3);
 
         return newData;
     }

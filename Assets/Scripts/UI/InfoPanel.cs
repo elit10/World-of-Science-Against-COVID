@@ -13,7 +13,7 @@ public class InfoPanel : Panel
         npcName.text = data.NPCname;
         npcJob.text = data.NPCjob;
         npcAge.text = data.NPCage;
-        npcVaccineCount.text = data.NPCvaccineCount;
+        npcVaccineCount.text = data.NPCvaccineCount.ToString();
     }
 
     public Text npcName;

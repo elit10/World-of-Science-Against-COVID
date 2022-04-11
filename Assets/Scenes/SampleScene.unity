@@ -3180,6 +3180,7 @@ GameObject:
   - component: {fileID: 800544591}
   - component: {fileID: 800544592}
   - component: {fileID: 800544593}
+  - component: {fileID: 800544594}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -3269,6 +3270,22 @@ MonoBehaviour:
   level: 1
   texts: []
   array: []
+--- !u!114 &800544594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800544588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b55d9b67a7040bcb2785595c641979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maskMaterials:
+  - {fileID: 2100000, guid: 8efdda319f257473cbd874f217cd225c, type: 2}
+  - {fileID: 2100000, guid: b47eb8a5d1ef6467f987d268fcb07728, type: 2}
+  - {fileID: 2100000, guid: 6453bc236301d4f468f361d90096193b, type: 2}
 --- !u!1 &830595633
 GameObject:
   m_ObjectHideFlags: 0
@@ -4583,6 +4600,7 @@ MonoBehaviour:
   - {fileID: 1177211033}
   - {fileID: 1229982359}
   - {fileID: 209171024}
+  mQuestionText: {fileID: 189476478}
   questionNumber: 0
   firstDigit: 7
 --- !u!1 &1075464984
@@ -5459,8 +5477,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc6fe1353f41c049a19677ff122bfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pedestrianPrefab: {fileID: 7958370077606377327, guid: 517061113b9bb8647b551a31e694c786, type: 3}
-  spawnCount: 10
+  pedestrianPrefabs:
+  - {fileID: 7958370077606377327, guid: 517061113b9bb8647b551a31e694c786, type: 3}
+  - {fileID: 6789743568413649835, guid: 6d4528784e6db40c192f8dddbf9cc918, type: 3}
+  spawnCount: 100
 --- !u!1001 &1526849218
 PrefabInstance:
   m_ObjectHideFlags: 0

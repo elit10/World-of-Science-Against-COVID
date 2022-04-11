@@ -7,9 +7,42 @@ using UnityEngine.AI;
 public class NPC : MonoBehaviour
 {
 	public NavMeshAgent agent;
+
 	public Animator anim;
 
+	private bool _hasMask;
+
+	public bool hasMask
+	{
+		get
+		{
+			return _hasMask;
+		}
+		set
+		{
+			_hasMask = value;
+
+			//activate mask object
+			if (mask != null) { mask.SetActive(value); }
+		}
+	}
+
+	public bool isCovid;
+
 	public NPCData data;
+
+	public int resistance
+	{
+		get
+		{
+			int maskval = hasMask ? 100 : 0;
+
+			return data.NPCvaccineCount * 10 + maskval;
+		}
+
+	}
+
+	public GameObject mask;
 
 	public enum Gender
 	{
@@ -28,7 +61,11 @@ public class NPC : MonoBehaviour
 	{
 		agent = GetComponent<NavMeshAgent>();
 		anim = GetComponent<Animator>();
-		
+
+		if (GetComponentInChildren<Mask>() != null)
+		{ mask = GetComponentInChildren<Mask>().gameObject; }
+
+		SpawnMask();
 
 		InvokeRepeating("Loop", 0, 1f);
 		Invoke("LateStart", 0.5f);
@@ -49,4 +86,15 @@ public class NPC : MonoBehaviour
 	{
 		Debug.Log("is walking");
 	}
+
+
+	public void SpawnMask()
+	{
+		int rand = Random.Range(0, 101);
+
+		hasMask = (rand < GameManager.instance.maskProb);
+
+
+	}
+
 }

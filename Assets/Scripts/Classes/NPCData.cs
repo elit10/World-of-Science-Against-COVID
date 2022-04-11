@@ -7,5 +7,6 @@ public class NPCData : MonoBehaviour
 	public string NPCname;
 	public string NPCjob;
 	public string NPCage;
-	public string NPCvaccineCount;
+	public int NPCvaccineCount;
+
 }
