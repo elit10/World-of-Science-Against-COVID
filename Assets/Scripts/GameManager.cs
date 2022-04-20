@@ -18,9 +18,12 @@ public class GameManager : MonoBehaviour
     [Header("Difficulty")]
     [Range(0,100)]
     public int maskProb;
+    [Range(0, 100)]
+    public int covidProb;
 
     [Header("Mask properties")]
     public Material[] maskMaterials;
+
 
 
 

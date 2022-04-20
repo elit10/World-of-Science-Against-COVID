@@ -12,7 +12,7 @@ public class Raycaster : MonoBehaviour
 
 	private void Update()
 	{
-
+		
 
 		if(Physics.Raycast(gameObject.transform.position,gameObject.transform.forward,out hit,100f))
 		{

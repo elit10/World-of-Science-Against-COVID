@@ -21,7 +21,7 @@ public class PedestrianSpawner : MonoBehaviour
 
 		while(count<spawnCount)
 		{
-			GameObject curPrefab = pedestrianPrefabs[Random.Range(0, pedestrianPrefabs.Length - 1)];
+			GameObject curPrefab = pedestrianPrefabs[Random.Range(0, pedestrianPrefabs.Length)];
 			GameObject obj = Instantiate(curPrefab);
 			Transform child = transform.GetChild(Random.Range(0, transform.childCount - 1));
 			obj.GetComponent<WaypointNavigator>().curWaypoint = child.GetComponent<Waypoint>();

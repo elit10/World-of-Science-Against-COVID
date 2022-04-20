@@ -42,6 +42,8 @@ public class NPC : MonoBehaviour
 
 	}
 
+	public float curSickness;
+
 	public GameObject mask;
 
 	public enum Gender
@@ -66,9 +68,10 @@ public class NPC : MonoBehaviour
 		{ mask = GetComponentInChildren<Mask>().gameObject; }
 
 		SpawnMask();
+		SpawnCovid();
 
-		InvokeRepeating("Loop", 0, 1f);
-		Invoke("LateStart", 0.5f);
+		InvokeRepeating("Loop", 0.5f, 1f);
+		Invoke("LateStart", 0.3f);
 	}
 
 
@@ -80,6 +83,39 @@ public class NPC : MonoBehaviour
 	public void Loop()
 	{
 		anim.SetFloat("Speed", agent.speed);
+
+		if (curSickness > resistance)
+		{
+			isCovid = true;
+			curSickness = 0;
+		}
+		if (isCovid)
+		{
+			float distance = hasMask ? 5 : 10;
+
+			NPC[] curClosest = Closest(this, distance);
+            for (int i = 0; i < curClosest.Length; i++)
+            {
+				curClosest[i].curSickness++;
+            }
+		}
+		
+	}
+	
+	public static NPC[] Closest(NPC self, float ratio)
+	{
+		NPC[] npcs = FindObjectsOfType<NPC>();
+		List<NPC> temp = new List<NPC>();
+
+		for (int i = 0; i < npcs.Length; i++)
+        {
+			if (Vector3.Distance(npcs[i].transform.position, self.transform.position) < ratio)
+			{
+				temp.Add(npcs[i]);
+			}
+		}
+		return temp.ToArray();
+
 	}
 
 	public void Walk()
@@ -93,8 +129,16 @@ public class NPC : MonoBehaviour
 		int rand = Random.Range(0, 101);
 
 		hasMask = (rand < GameManager.instance.maskProb);
+	}
+
+	public void SpawnCovid()
+	{
+		int rand = Random.Range(0, 101);
+
+		isCovid = (rand < GameManager.instance.maskProb);
 
 
 	}
+
 
 }
