@@ -27,7 +27,29 @@ public class NPC : MonoBehaviour
 		}
 	}
 
-	public bool isCovid;
+	private bool _isCovid;
+	public bool isCovid
+	{
+		get
+		{
+			return _isCovid;
+
+		}
+		set
+		{
+			if (value)
+			{
+				stat.ChangeColor(1);
+			}
+
+			if (!value)
+			{
+				stat.ChangeColor(2);
+			}
+
+			_isCovid = value;
+		}
+	}
 
 	public NPCData data;
 
@@ -43,6 +65,8 @@ public class NPC : MonoBehaviour
 	}
 
 	public float curSickness;
+
+	public NPCStatus stat;
 
 	public GameObject mask;
 
@@ -63,12 +87,14 @@ public class NPC : MonoBehaviour
 	{
 		agent = GetComponent<NavMeshAgent>();
 		anim = GetComponent<Animator>();
+		stat = GetComponentInChildren<NPCStatus>();
+
 
 		if (GetComponentInChildren<Mask>() != null)
 		{ mask = GetComponentInChildren<Mask>().gameObject; }
 
 		SpawnMask();
-		SpawnCovid();
+		
 
 		InvokeRepeating("Loop", 0.5f, 1f);
 		Invoke("LateStart", 0.3f);
@@ -78,6 +104,7 @@ public class NPC : MonoBehaviour
 	public void LateStart()
     {
 		data = NPCManager.instance.RandomData(NPCGender);
+		SpawnCovid();
 	}
 
 	public void Loop()
@@ -87,18 +114,24 @@ public class NPC : MonoBehaviour
 		if (curSickness > resistance)
 		{
 			isCovid = true;
-			curSickness = 0;
+			//curSickness = resistance + 1;
+		}
+		if (curSickness < resistance)
+		{
+			isCovid = false;
+
 		}
 		if (isCovid)
 		{
 			float distance = hasMask ? 5 : 10;
 
 			NPC[] curClosest = Closest(this, distance);
-            for (int i = 0; i < curClosest.Length; i++)
-            {
+			for (int i = 0; i < curClosest.Length; i++)
+			{
 				curClosest[i].curSickness++;
-            }
+			}
 		}
+		
 		
 	}
 	
@@ -135,7 +168,7 @@ public class NPC : MonoBehaviour
 	{
 		int rand = Random.Range(0, 101);
 
-		isCovid = (rand < GameManager.instance.maskProb);
+		curSickness = (rand < GameManager.instance.covidProb) ? resistance+1 : 0;
 
 
 	}

@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     [Header("Difficulty")]
-    [Range(0,100)]
+    [Range(0, 100)]
     public int maskProb;
     [Range(0, 100)]
     public int covidProb;
@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour
     [Header("Mask properties")]
     public Material[] maskMaterials;
 
-
+    [Header("NPC Status")]
+    public Material[] statusMats;
 
 
 }

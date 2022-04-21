@@ -6,7 +6,30 @@ public class Shooter : MonoBehaviour
 {
     public ParticleSystem[] sprayParticles;
     public ParticleSystem[] maskParticles;
+    public float power;
 
+
+    #region Singleton
+    public static Shooter instance;
+    private void Awake()
+    {
+        if (instance == null) { instance = this; }
+    }
+    #endregion
+
+    public static void Cure(NPC npc,float val)
+    {
+        npc.curSickness -= val;
+        Debug.Log(npc.name);
+    }
+    public static void Cure(NPC[] npcs, float val)
+    {
+        for (int i = 0; i < npcs.Length; i++)
+        {
+            npcs[i].curSickness -= val;
+            Debug.Log(npcs[i].name);
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -16,6 +39,7 @@ public class Shooter : MonoBehaviour
             // dezenfektan
             PlayAll(sprayParticles);
 
+            Cure(GunCone.instance.inRange.ToArray(),power);
 
         }
         if (Input.GetMouseButtonDown(1))
