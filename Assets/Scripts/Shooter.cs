@@ -7,7 +7,8 @@ public class Shooter : MonoBehaviour
     public ParticleSystem[] sprayParticles;
     public ParticleSystem[] maskParticles;
     public float power;
-
+    public Transform barell;
+    public Object maskPrefab;
 
     #region Singleton
     public static Shooter instance;
@@ -31,6 +32,18 @@ public class Shooter : MonoBehaviour
         }
     }
 
+    public void ThrowMask()
+    {
+        GameObject temp = (GameObject)Instantiate(maskPrefab, barell.position, barell.rotation, null);
+        temp.AddComponent<MaskBullet>();
+
+        MaskBullet mb = temp.GetComponent<MaskBullet>();
+
+
+        mb.barell = barell;
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -46,7 +59,7 @@ public class Shooter : MonoBehaviour
         {
             //Maske
             PlayAll(maskParticles);
-
+            ThrowMask();
 
         }
 

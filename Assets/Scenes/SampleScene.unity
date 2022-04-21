@@ -1564,6 +1564,8 @@ MonoBehaviour:
   - {fileID: 1498104437}
   maskParticles: []
   power: 100
+  barell: {fileID: 1662837637}
+  maskPrefab: {fileID: 3191987381095105419, guid: 6a2df0dec960b43988e45b6306642c6c, type: 3}
 --- !u!1 &255855985
 GameObject:
   m_ObjectHideFlags: 0
@@ -3586,8 +3588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b55d9b67a7040bcb2785595c641979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maskProb: 100
-  covidProb: 100
+  maskProb: 0
+  covidProb: 50
   maskMaterials:
   - {fileID: 2100000, guid: 8efdda319f257473cbd874f217cd225c, type: 2}
   - {fileID: 2100000, guid: b47eb8a5d1ef6467f987d268fcb07728, type: 2}
@@ -6506,6 +6508,11 @@ MonoBehaviour:
   timer: 0
   order: 0
   isInDialogue: 0
+--- !u!4 &1662837637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1300264252759386080, guid: cb5f4c38707fd47369968c3df4825e72, type: 3}
+  m_PrefabInstance: {fileID: 684464213}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1691019950
 GameObject:
   m_ObjectHideFlags: 0
