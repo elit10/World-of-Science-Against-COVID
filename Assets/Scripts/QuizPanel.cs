@@ -24,8 +24,6 @@ public class QuizPanel : Panel
             Text[] curAnswer = value.curType == Question.questionType.Matching ? mAnswers : answers;
             Text curQuestion = value.curType == Question.questionType.Matching ? mQuestionText : questionText;
 
-            Debug.Log(value.curType);
-            Debug.Log(value.answers.Length);
 
 
             _curQuestion = value;
@@ -57,6 +55,14 @@ public class QuizPanel : Panel
 
     public int questionNumber;
 
+    private void OnEnable()
+    {
+        CameraManager.CamLock(false);
+    }
+    private void OnDisable()
+    {
+        CameraManager.CamLock(true);
+    }
 
     public int firstDigit = 7;
     public void AnswerMatch(int order)

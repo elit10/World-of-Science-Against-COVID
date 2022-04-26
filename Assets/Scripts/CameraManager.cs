@@ -4,10 +4,13 @@ using UnityEngine;
 
 using DG.Tweening;
 
+using UnityStandardAssets.Characters.FirstPerson;
+
 public class CameraManager : MonoBehaviour
 {
     #region Singleton
 
+    public static RigidbodyFirstPersonController controller;
 
     public static CameraManager instance;
 
@@ -16,6 +19,7 @@ public class CameraManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
+            controller = FindObjectOfType<RigidbodyFirstPersonController>();
         }
     }
     #endregion
@@ -36,13 +40,11 @@ public class CameraManager : MonoBehaviour
         }
     }
 
-
+    
 
     private void Start()
     {
         mainCamera = GetComponent<Camera>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     public void LockOnTarget(Vector3 position)
@@ -61,7 +63,17 @@ public class CameraManager : MonoBehaviour
     }
 
 
+    public static void EnableControls(bool val)
+    {
+        controller.enabled = val;
+    }
 
+    public static void CamLock(bool val)
+    {
+        Cursor.lockState = val ? CursorLockMode.Locked : CursorLockMode.None;
+
+        Cursor.visible = !val;
+    }
 
     public void Focus(bool val)
     {

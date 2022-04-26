@@ -117,62 +117,62 @@ public class Question
 
 }
 
-public class MatchingQ : Question
-{
-    //6 answers needed
+//public class MatchingQ : Question
+//{
+//    //6 answers needed
 
-    public int[] CorrectOrder()
-    {
-        int[] array = new int[] { 0,0,0};
+//    public int[] CorrectOrder()
+//    {
+//        int[] array = new int[] { 0,0,0};
 
-        for (int i = 0; i < 6; i++)
-		{
-            if(answers[i].text.Contains("1"))
-			{
-                array[0] = i;
-			}
-            if (answers[i].text.Contains("2"))
-            {
-                array[1] = i;
-            }
-            if (answers[i].text.Contains("3"))
-            {
-                array[2] = i;
-            }
-        }
-
-
+//        for (int i = 0; i < 6; i++)
+//		{
+//            if(answers[i].text.Contains("1"))
+//			{
+//                array[0] = i;
+//			}
+//            if (answers[i].text.Contains("2"))
+//            {
+//                array[1] = i;
+//            }
+//            if (answers[i].text.Contains("3"))
+//            {
+//                array[2] = i;
+//            }
+//        }
 
 
 
-        return array;
-
-    }
-}
-
-public class MCQ: Question
-{
 
 
-    public int[] CorrectOrder()
-	{
-        int[] order = new int[answers.Length];
+//        return array;
 
-        for (int i = 0; i < answers.Length; i++)
-        {
-            if (answers[i].isCorrect)
-            {
-                order[i] = 1;
-            }
-            else
-			{
-                order[i] = 0;
-			}
-        }
+//    }
+//}
 
-        return order;
-    }
-}
+//public class MCQ: Question
+//{
+
+
+//    public int[] CorrectOrder()
+//	{
+//        int[] order = new int[answers.Length];
+
+//        for (int i = 0; i < answers.Length; i++)
+//        {
+//            if (answers[i].isCorrect)
+//            {
+//                order[i] = 1;
+//            }
+//            else
+//			{
+//                order[i] = 0;
+//			}
+//        }
+
+//        return order;
+//    }
+//}
 
 
 public class Answer

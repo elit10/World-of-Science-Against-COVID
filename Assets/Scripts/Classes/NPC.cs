@@ -21,6 +21,10 @@ public class NPC : MonoBehaviour
 		set
 		{
 			_hasMask = value;
+			if (value)
+			{
+				curSickness += 100;
+			}
 
 			//activate mask object
 			if (mask != null) { mask.SetActive(value); }
@@ -39,12 +43,12 @@ public class NPC : MonoBehaviour
 		{
 			if (value)
 			{
-				stat.ChangeColor(1);
+				stat.ChangeColor(0);
 			}
 
 			if (!value)
 			{
-				stat.ChangeColor(2);
+				stat.ChangeColor(1);
 			}
 
 			_isCovid = value;
@@ -94,6 +98,8 @@ public class NPC : MonoBehaviour
 		{ mask = GetComponentInChildren<Mask>().gameObject; }
 
 		SpawnMask();
+
+		
 		
 
 		InvokeRepeating("Loop", 0.5f, 1f);
@@ -160,15 +166,14 @@ public class NPC : MonoBehaviour
 	public void SpawnMask()
 	{
 		int rand = Random.Range(0, 101);
-
-		hasMask = (rand < GameManager.instance.maskProb);
+		hasMask = (rand < GameManager.maskProb);
 	}
 
 	public void SpawnCovid()
 	{
 		int rand = Random.Range(0, 101);
 
-		curSickness = (rand < GameManager.instance.covidProb) ? resistance+1 : 0;
+		curSickness = (rand < GameManager.covidProb) ? resistance+1 : 0;
 
 
 	}

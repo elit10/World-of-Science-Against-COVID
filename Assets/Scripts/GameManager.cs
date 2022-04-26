@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    #region Singleton
     public static GameManager instance;
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
+        if (instance == null) { instance = this; }
     }
-    #endregion
 
     [Header("Difficulty")]
     [Range(0, 100)]
-    public int maskProb;
+    public static int maskProb;
     [Range(0, 100)]
-    public int covidProb;
+    public static int covidProb;
 
     [Header("Mask properties")]
     public Material[] maskMaterials;
@@ -27,5 +22,14 @@ public class GameManager : MonoBehaviour
     [Header("NPC Status")]
     public Material[] statusMats;
 
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+
+        Cursor.visible = false;
+
+
+    }
 
 }

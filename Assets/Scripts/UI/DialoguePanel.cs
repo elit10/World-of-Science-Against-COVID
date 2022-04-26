@@ -41,12 +41,19 @@ public class DialoguePanel : Panel
 
     }
 
-   
+    private void OnEnable()
+    {
+        CameraManager.EnableControls(false);
+    }
+    private void OnDisable()
+    {
+        CameraManager.EnableControls(true);
+    }
+
     private void Update()
     {
        if(Input.GetButtonDown("Submit"))
         {
-            Debug.Log("pressed");
             order++;
 
         }

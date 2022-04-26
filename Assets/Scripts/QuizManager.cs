@@ -46,7 +46,7 @@ public class QuizManager : MonoBehaviour
 
 	public Quiz NewQuiz(int count)
 	{
-		Quiz quiz = new Quiz();
+		Quiz quiz = gameObject.AddComponent<Quiz>();
 
 		quiz.order = 0;
 
@@ -70,8 +70,6 @@ public class QuizManager : MonoBehaviour
 	public Question NewQuestion(string[] val)
 	{
 		Question question = new Question();
-		Debug.Log("val is : " + val.Length);
-
 
 		if(val.Length == 7)
         {
@@ -109,9 +107,6 @@ public class QuizManager : MonoBehaviour
 
 		answer.text = val;
 
-
-
-
 		if(val.Contains('*'))
 		{
 			answer.isCorrect = true;
@@ -124,13 +119,7 @@ public class QuizManager : MonoBehaviour
 
 		return answer;
 	}
-
-	private void Update()
-	{
-
-		Cursor.visible = true;
-		Cursor.lockState = CursorLockMode.None;
-	}
+	
 
 	public void OpenUpQuiz(Quiz source)
 	{

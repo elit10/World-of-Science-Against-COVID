@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour
 
 	public void CreateNullDialogue()
 	{
-		Dialogue newDialogue = new Dialogue();
+		Dialogue newDialogue = gameObject.AddComponent<Dialogue>();
 
 		newDialogue.dialogues = new string[]
 		{
@@ -130,10 +130,9 @@ public class DialogueManager : MonoBehaviour
 		curNPC.Walk(false);
 
 		CameraManager.instance.Focus(true);
-		CameraManager.instance.LockOnTarget(curNPC.gameObject.transform.position);
+		CameraManager.instance.LockOnTarget(curNPC.gameObject.transform.position+ Vector3.up*1);
 
 		SlowDownTime(true);
-		Debug.Log("entered dialogue");
 		
 		UIManager.instance.OpenUpPanel(UIManager.instance.dialoguePanel);
 

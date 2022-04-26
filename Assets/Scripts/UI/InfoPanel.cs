@@ -10,6 +10,7 @@ public class InfoPanel : Panel
 
     public void FillValues(NPCData data)
     {
+        if (data == null) { return; }
         npcName.text = data.NPCname;
         npcJob.text = data.NPCjob;
         npcAge.text = data.NPCage;
