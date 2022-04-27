@@ -3598,7 +3598,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 6453bc236301d4f468f361d90096193b, type: 2}
   statusMats:
   - {fileID: 2100000, guid: 7a1698da1f8054f009d63e6f3b655937, type: 2}
-  - {fileID: 2100000, guid: 7a1698da1f8054f009d63e6f3b655937, type: 2}
   - {fileID: 2100000, guid: b6a3545dccfea4bfdadadd32f5665568, type: 2}
 --- !u!1 &830595633
 GameObject:
